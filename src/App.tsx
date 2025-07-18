@@ -4,6 +4,7 @@ import { Menu, X, Instagram, Facebook, Apple as WhatsApp, Mail, Phone, MapPin, S
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [activeTab, setActiveTab] = useState('sobre');
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isVideoMuted, setIsVideoMuted] = useState(true);
   const [formData, setFormData] = useState({
@@ -82,6 +83,7 @@ function App() {
     { id: 'home', label: 'Início' },
     { id: 'about', label: 'Sobre Mim' },
     { id: 'results', label: 'Resultados' },
+    { id: 'products', label: 'Produtos' },
     { id: 'services', label: 'Serviços' },
     { id: 'contact', label: 'Contato' }
   ];
@@ -141,6 +143,36 @@ function App() {
     { number: '10+', label: 'Anos de Experiência' },
     { number: '95%', label: 'Taxa de Sucesso' },
     { number: '24/7', label: 'Suporte Disponível' }
+  ];
+
+  const products = [
+    {
+      title: 'Guia Completo de Emagrecimento',
+      description: 'E-book com estratégias comprovadas para perder peso de forma saudável e duradoura.',
+      price: 'R$ 97',
+      originalPrice: 'R$ 197',
+      image: 'https://images.pexels.com/photos/4474052/pexels-photo-4474052.jpeg?auto=compress&cs=tinysrgb&w=400',
+      features: ['120+ páginas', 'Planos alimentares', 'Receitas saudáveis', 'Suporte por 30 dias'],
+      hotmartUrl: '#'
+    },
+    {
+      title: 'Treino em Casa - Sem Equipamentos',
+      description: 'Programa completo de exercícios para fazer em casa, sem precisar de academia.',
+      price: 'R$ 67',
+      originalPrice: 'R$ 147',
+      image: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=400',
+      features: ['50+ exercícios', 'Vídeos explicativos', 'Progressão gradual', 'App mobile'],
+      hotmartUrl: '#'
+    },
+    {
+      title: 'Mindset Fitness - Transformação Mental',
+      description: 'Curso sobre psicologia do emagrecimento e como manter a motivação.',
+      price: 'R$ 127',
+      originalPrice: 'R$ 247',
+      image: 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=400',
+      features: ['8 módulos', 'Técnicas de motivação', 'Planilhas práticas', 'Grupo VIP'],
+      hotmartUrl: '#'
+    }
   ];
 
   return (
@@ -331,22 +363,142 @@ function App() {
                 </p>
               </div>
               
-              <div className="space-y-6">
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Sou um Educador Físico com mais de 10 anos de experiência em transformações corporais. 
-                  Especialista em emagrecimento, hipertrofia e condicionamento físico, já ajudei mais de 350 pessoas 
-                  a alcançarem seus objetivos.
-                </p>
+              {/* Tabs Navigation */}
+              <div className="flex space-x-1 bg-slate-900/50 p-1 rounded-2xl">
+                <button
+                  onClick={() => setActiveTab('sobre')}
+                  className={`flex-1 py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                    activeTab === 'sobre'
+                      ? 'bg-cyan-400 text-slate-900'
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                  }`}
+                >
+                  Sobre Mim
+                </button>
+                <button
+                  onClick={() => setActiveTab('formacao')}
+                  className={`flex-1 py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                    activeTab === 'formacao'
+                      ? 'bg-cyan-400 text-slate-900'
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                  }`}
+                >
+                  Formação
+                </button>
+                <button
+                  onClick={() => setActiveTab('especialidades')}
+                  className={`flex-1 py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                    activeTab === 'especialidades'
+                      ? 'bg-cyan-400 text-slate-900'
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                  }`}
+                >
+                  Especialidades
+                </button>
+              </div>
 
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Minha filosofia é baseada em ciência, consistência e personalização. Acredito que cada pessoa 
-                  é única e merece um plano específico para suas necessidades e objetivos.
-                </p>
+              {/* Tab Content */}
+              <div className="min-h-[300px]">
+                {activeTab === 'sobre' && (
+                  <div className="space-y-6 animate-fade-in">
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                      Sou um Educador Físico com mais de 10 anos de experiência em transformações corporais. 
+                      Especialista em emagrecimento, hipertrofia e condicionamento físico, já ajudei mais de 350 pessoas 
+                      a alcançarem seus objetivos.
+                    </p>
 
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Utilizando métodos cientificamente comprovados e um acompanhamento próximo, 
-                  garantimos resultados reais e duradouros.
-                </p>
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                      Minha filosofia é baseada em ciência, consistência e personalização. Acredito que cada pessoa 
+                      é única e merece um plano específico para suas necessidades e objetivos.
+                    </p>
+
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                      Utilizando métodos cientificamente comprovados e um acompanhamento próximo, 
+                      garantimos resultados reais e duradouros.
+                    </p>
+                  </div>
+                )}
+
+                {activeTab === 'formacao' && (
+                  <div className="space-y-6 animate-fade-in">
+                    <h4 className="text-2xl font-bold text-white mb-4">Formação Acadêmica</h4>
+                    <div className="space-y-4">
+                      <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
+                        <h5 className="text-cyan-400 font-semibold">Educação Física - Bacharelado</h5>
+                        <p className="text-gray-300">Universidade de São Paulo (USP) • 2010-2014</p>
+                      </div>
+                      <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
+                        <h5 className="text-cyan-400 font-semibold">Pós-graduação em Nutrição Esportiva</h5>
+                        <p className="text-gray-300">UNIFESP • 2015-2016</p>
+                      </div>
+                      <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
+                        <h5 className="text-cyan-400 font-semibold">MBA em Gestão Esportiva</h5>
+                        <p className="text-gray-300">FGV • 2018-2020</p>
+                      </div>
+                    </div>
+
+                    <h4 className="text-2xl font-bold text-white mb-4 mt-8">Cursos e Certificações</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {[
+                        'Certificação ACSM - Personal Trainer',
+                        'Curso de Hipertrofia Muscular',
+                        'Especialização em Emagrecimento',
+                        'Treinamento Funcional Avançado',
+                        'Nutrição Comportamental',
+                        'Reabilitação e Exercício Terapêutico'
+                      ].map((curso, index) => (
+                        <div key={index} className="bg-slate-900/50 p-3 rounded-lg border border-slate-700 flex items-center">
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                          <span className="text-gray-300">{curso}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {activeTab === 'especialidades' && (
+                  <div className="space-y-6 animate-fade-in">
+                    <h4 className="text-2xl font-bold text-white mb-4">Áreas de Especialização</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Emagrecimento</h5>
+                        <p className="text-gray-300 text-sm mb-3">Protocolos específicos para perda de gordura corporal</p>
+                        <ul className="text-gray-400 text-sm space-y-1">
+                          <li>• Déficit calórico controlado</li>
+                          <li>• Treino metabólico</li>
+                          <li>• Acompanhamento nutricional</li>
+                        </ul>
+                      </div>
+                      <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Hipertrofia</h5>
+                        <p className="text-gray-300 text-sm mb-3">Ganho de massa muscular com base científica</p>
+                        <ul className="text-gray-400 text-sm space-y-1">
+                          <li>• Periodização avançada</li>
+                          <li>• Sobrecarga progressiva</li>
+                          <li>• Suplementação estratégica</li>
+                        </ul>
+                      </div>
+                      <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Condicionamento</h5>
+                        <p className="text-gray-300 text-sm mb-3">Melhora da capacidade cardiovascular e resistência</p>
+                        <ul className="text-gray-400 text-sm space-y-1">
+                          <li>• HIIT personalizado</li>
+                          <li>• Treino funcional</li>
+                          <li>• Preparação física</li>
+                        </ul>
+                      </div>
+                      <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Reabilitação</h5>
+                        <p className="text-gray-300 text-sm mb-3">Exercícios terapêuticos e prevenção de lesões</p>
+                        <ul className="text-gray-400 text-sm space-y-1">
+                          <li>• Correção postural</li>
+                          <li>• Fortalecimento específico</li>
+                          <li>• Mobilidade articular</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="grid grid-cols-2 gap-6">
@@ -357,20 +509,6 @@ function App() {
                 <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">10+</div>
                   <div className="text-gray-300">Anos de Experiência</div>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="text-xl font-bold text-white">Especializações</h4>
-                <div className="flex flex-wrap gap-3">
-                  {['CREF Ativo', 'Nutrição Esportiva', 'Hipertrofia', 'Emagrecimento', 'Funcional', 'Reabilitação'].map((cert) => (
-                    <span
-                      key={cert}
-                      className="bg-gradient-to-r from-cyan-400/10 to-cyan-300/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30 hover:bg-cyan-400/20 transition-all duration-300"
-                    >
-                      {cert}
-                    </span>
-                  ))}
                 </div>
               </div>
             </div>
@@ -439,6 +577,90 @@ function App() {
               Quero Minha Transformação
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="py-20 bg-slate-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              Meus <span className="text-cyan-400">Produtos</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Produtos digitais desenvolvidos com base na minha experiência de mais de 10 anos. 
+              Conteúdo prático e científico para acelerar seus resultados.
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-700 hover:border-cyan-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-400/10 hover:scale-105 group"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      OFERTA
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                    {product.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+                    {product.description}
+                  </p>
+                  
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl font-bold text-cyan-400">{product.price}</span>
+                    <span className="text-gray-500 line-through text-lg">{product.originalPrice}</span>
+                  </div>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300 text-sm">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a
+                    href={product.hotmartUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-cyan-400 text-slate-900 py-3 rounded-full font-bold text-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
+                  >
+                    Comprar Agora
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <div className="bg-slate-900/50 p-8 rounded-3xl border border-slate-700 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                🎯 <span className="text-cyan-400">Garantia de 7 dias</span>
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                Todos os produtos possuem garantia incondicional de 7 dias. 
+                Se não ficar satisfeito, devolvemos 100% do seu dinheiro.
+              </p>
+            </div>
           </div>
         </div>
       </section>
