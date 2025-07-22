@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Facebook, Apple as WhatsApp, Mail, Phone, MapPin, Star, ArrowRight, ChevronDown, Play, Pause, Volume2, VolumeX, Award, Users, Target, Zap } from 'lucide-react';
+import { Menu, X, Apple as Mail, Phone, MapPin, ArrowRight, ChevronDown, Play, Pause, Volume2, VolumeX, Award, Target, Zap } from 'lucide-react';
+import { FaWhatsapp, FaInstagram, } from 'react-icons/fa';
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -91,56 +93,66 @@ function App() {
   const transformations = [
     {
       id: 1,
-      before: 'https://images.pexels.com/photos/6551415/pexels-photo-6551415.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg?auto=compress&cs=tinysrgb&w=400'
+      before: 'images/aluna1antes.webp',
+      after: 'images/aluna1depois.webp',
     },
     {
       id: 2,
-      before: 'https://images.pexels.com/photos/6551070/pexels-photo-6551070.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=400'
+      before: 'images/aluna2antes.webp',
+      after: 'images/aluna2depois.webp',
     },
     {
       id: 3,
-      before: 'https://images.pexels.com/photos/6551174/pexels-photo-6551174.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=400'
+      before: 'images/aluna3antes.webp',
+      after: 'images/aluna3depois.webp',
     },
     {
       id: 4,
-      before: 'https://images.pexels.com/photos/6551016/pexels-photo-6551016.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=400'
+      before: 'images/aluna4antes.webp',
+      after: 'images/aluna4depois.webp',
     },
     {
       id: 5,
-      before: 'https://images.pexels.com/photos/6551178/pexels-photo-6551178.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/3757376/pexels-photo-3757376.jpeg?auto=compress&cs=tinysrgb&w=400'
+      before: 'images/alunaantes.webp',
+      after: 'images/alunadepois.webp',
     },
     {
       id: 6,
-      before: 'https://images.pexels.com/photos/6551180/pexels-photo-6551180.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=400'
+      before: 'images/aluna5antes.webp',
+      after: 'images/aluna5depois.webp',
     }
   ];
 
   const services = [
     {
-      title: 'Plano Mensal',
-      description: 'Acompanhamento completo com flexibilidade mensal',
-      price: 'R$ 350/mês',
-      features: ['Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física', 'Plano nutricional básico', 'Aulas presenciais ou online'],
+      title: 'Plano Trimestral',
+      description: 'Suporte integral com opções de pagamento facilitadas',
+      price: 'R$ 260/mês',
+      features: ['Pagamento mensal durante 3 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física',],
+      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849763dae001976a68eb2c0297',
+      icon: Zap
+    },
+       {
+      title: 'Plano Semestral',
+      description: 'Assistência completa com formas de pagamento que cabem em você',
+      price: 'R$ 225/mês',
+      features: ['Pagamento mensal durante 6 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física',],
+      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849764e81a01976a6a1a09023a',
       icon: Target
     },
     {
-      title: 'Plano Trimestral',
-      description: 'Melhor custo-benefício com compromisso de 3 meses',
-      price: 'R$ 900 (3 meses)',
-      features: ['Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física completa', 'Plano nutricional detalhado', 'Acompanhamento semanal', '15% de desconto'],
-      icon: Zap
-    }
+      title: 'Plano Anual',
+      description: 'Melhor custo-benefício com compromisso de 12 meses',
+      price: 'R$ 195/mês',
+      features: ['Pagamento mensal durante 12 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física',],
+      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c938084976a0ea101976a5fa1710025',
+      icon: Target
+    },
   ];
 
   const stats = [
-    { number: '350+', label: 'Alunas' },
-    { number: '10+', label: 'Anos de Experiência' },
+    { number: '470+', label: 'Alunas' },
+    { number: '100%', label: 'Treinos Individualizados' },
     { number: '95%', label: 'Taxa de Sucesso' },
     { number: '24/7', label: 'Suporte Disponível' }
   ];
@@ -183,7 +195,7 @@ function App() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent">
-                FitCoach Pro
+                Raphael Viezorkosky
               </div>
             </div>
             
@@ -349,7 +361,7 @@ function App() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400/20 to-cyan-300/20 rounded-3xl blur-2xl"></div>
               <img
-                src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="images/raphaperfil2.webp"
                 alt="Personal Trainer"
                 className="relative rounded-3xl shadow-2xl w-full transform hover:scale-105 transition-all duration-500"
               />
@@ -358,10 +370,10 @@ function App() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-4xl font-bold text-white mb-4">
-                  Carlos <span className="text-cyan-400">Fitness</span>
+                  Raphael <span className="text-cyan-400">Viezorkosky</span>
                 </h3>
                 <p className="text-cyan-400 text-xl font-semibold mb-6">
-                  Educador Físico • CREF 123456-G/SP
+                  Educador Físico • CREF PR - 035707
                 </p>
               </div>
               
@@ -394,8 +406,7 @@ function App() {
                       ? 'bg-cyan-400 text-slate-900'
                       : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50'
                   }`}
-                >t
-                  Especialidades
+                >Especialidades
                 </button>
               </div>
 
@@ -404,19 +415,22 @@ function App() {
                 {activeTab === 'sobre' && (
                   <div className="space-y-6 animate-fade-in">
                     <p className="text-gray-300 text-lg leading-relaxed">
-                      Sou um Educador Físico com mais de 10 anos de experiência em transformações corporais. 
-                      Especialista em emagrecimento, hipertrofia e condicionamento físico, já ajudei mais de 350 pessoas 
-                      a alcançarem seus objetivos.
+                      Sou formado em Educação Física e especialista em Musculação Feminina e Estética, Correção Postural e Glúteos.
+                      Já acompanhei mais de 470 alunas no digital, em 4 continentes, sempre com foco em resultados reais e duradouros, 
+                      dentro de uma consultoria que te acompanha de verdade.
+
                     </p>
 
                     <p className="text-gray-300 text-lg leading-relaxed">
-                      Minha filosofia é baseada em ciência, consistência e personalização. Acredito que cada pessoa 
-                      é única e merece um plano específico para suas necessidades e objetivos.
+                      Meu trabalho é baseado em ciência, vivência prática e individualidade.
+                      Cada planilha de treino é pensada exclusivamente para atender os objetivos e necessidades de cada aluna, 
+                      de maneira totalmente individual, com acompanhamento direto e personalizados feito por mim, não existe ficha pronta. 
+
                     </p>
 
                     <p className="text-gray-300 text-lg leading-relaxed">
-                      Utilizando métodos cientificamente comprovados e um acompanhamento próximo, 
-                      garantimos resultados reais e duradouros.
+                      Mais do que treinar, meu objetivo é te ajudar a se sentir bem com você mesma,
+                      resgatando sua autoestima por meio da estética e da performance.
                     </p>
                   </div>
                 )}
@@ -427,27 +441,17 @@ function App() {
                     <div className="space-y-4">
                       <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
                         <h5 className="text-cyan-400 font-semibold">Educação Física - Bacharelado</h5>
-                        <p className="text-gray-300">Universidade de São Paulo (USP) • 2010-2014</p>
-                      </div>
-                      <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
-                        <h5 className="text-cyan-400 font-semibold">Pós-graduação em Nutrição Esportiva</h5>
-                        <p className="text-gray-300">UNIFESP • 2015-2016</p>
-                      </div>
-                      <div className="bg-slate-900/50 p-4 rounded-xl border border-slate-700">
-                        <h5 className="text-cyan-400 font-semibold">MBA em Gestão Esportiva</h5>
-                        <p className="text-gray-300">FGV • 2018-2020</p>
-                      </div>
+                        <p className="text-gray-300">Centro Universitário Filadélfia - UniFil</p>
+                      </div> 
                     </div>
-
+                   
                     <h4 className="text-2xl font-bold text-white mb-4 mt-8">Cursos e Certificações</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {[
-                        'Certificação ACSM - Personal Trainer',
-                        'Curso de Hipertrofia Muscular',
-                        'Especialização em Emagrecimento',
-                        'Treinamento Funcional Avançado',
-                        'Nutrição Comportamental',
-                        'Reabilitação e Exercício Terapêutico'
+                        'Qualificação em Reabilitação Funcional - BPro Fisioterapia',
+                        'Treinamento de Força e Treinamento Resistido',
+                        'Treinamentos Kettlebell Hardstyle - Wod Londrina',
+                      
                       ].map((curso, index) => (
                         <div key={index} className="bg-slate-900/50 p-3 rounded-lg border border-slate-700 flex items-center">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
@@ -463,39 +467,39 @@ function App() {
                     <h4 className="text-2xl font-bold text-white mb-4">Áreas de Especialização</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
-                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Emagrecimento</h5>
-                        <p className="text-gray-300 text-sm mb-3">Protocolos específicos para perda de gordura corporal</p>
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Musculação Feminina</h5>
+                        <p className="text-gray-300 text-sm mb-3">PProtocolos personalizados para a melhora da estética corporal, com foco no público feminino.</p>
                         <ul className="text-gray-400 text-sm space-y-1">
-                          <li>• Déficit calórico controlado</li>
-                          <li>• Treino metabólico</li>
-                          <li>• Acompanhamento nutricional</li>
+                          <li>• Treinos específicos para membros inferiores, glúteos e correção postural.</li>
+                          <li>• Divisão estratégica dos exercícios para resultados eficazes.</li>
+                          <li>• Acompanhamento direto via WhatsApp para correção de exercícios.</li>
                         </ul>
                       </div>
                       <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
-                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Hipertrofia</h5>
-                        <p className="text-gray-300 text-sm mb-3">Ganho de massa muscular com base científica</p>
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Correção Postural</h5>
+                        <p className="text-gray-300 text-sm mb-3">Melhore sua postura, reduza dores e previna lesões com protocolos personalizados.</p>
                         <ul className="text-gray-400 text-sm space-y-1">
-                          <li>• Periodização avançada</li>
-                          <li>• Sobrecarga progressiva</li>
-                          <li>• Suplementação estratégica</li>
+                          <li>• Avaliação postural individual através de fotos pelo WhatsApp.</li>
+                          <li>• Fortalecimento e alongamento de músculos específicos.</li>
+                          <li>• Aprendizagem correta dos movimentos para evitar compensações.</li>
                         </ul>
                       </div>
                       <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
-                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Condicionamento</h5>
-                        <p className="text-gray-300 text-sm mb-3">Melhora da capacidade cardiovascular e resistência</p>
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Estética</h5>
+                        <p className="text-gray-300 text-sm mb-3">Recupere sua silhueta com treinos direcionados aos seus objetivos.</p>
                         <ul className="text-gray-400 text-sm space-y-1">
-                          <li>• HIIT personalizado</li>
-                          <li>• Treino funcional</li>
-                          <li>• Preparação física</li>
+                          <li>• Estratégia de divisões de treinos para regiões específicas.</li>
+                          <li>• Protocolo elaborado de forma individualizada.</li>
+                          <li>• Treinos com foco em estética.</li>
                         </ul>
                       </div>
                       <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
-                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Reabilitação</h5>
-                        <p className="text-gray-300 text-sm mb-3">Exercícios terapêuticos e prevenção de lesões</p>
+                        <h5 className="text-cyan-400 font-bold text-lg mb-3">Glúteos</h5>
+                        <p className="text-gray-300 text-sm mb-3">Protocolos personalizados para atender seus objetivos, visando o melhor desenvolvimento do seu glúteo.</p>
                         <ul className="text-gray-400 text-sm space-y-1">
-                          <li>• Correção postural</li>
-                          <li>• Fortalecimento específico</li>
-                          <li>• Mobilidade articular</li>
+                          <li>• Seleção correta dos exercícios com base nos seus objetivos.</li>
+                          <li>• Divisão estratégica para otimizar o estímulo.</li>
+                          <li>• Correção dos exercícios via WhatsApp.</li>
                         </ul>
                       </div>
                     </div>
@@ -505,12 +509,12 @@ function App() {
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">350+</div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">470+</div>
                   <div className="text-gray-300">Alunas</div>
                 </div>
                 <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">10+</div>
-                  <div className="text-gray-300">Anos de Experiência</div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">100%</div>
+                  <div className="text-gray-300">Treinos Individualizados</div>
                 </div>
               </div>
             </div>
@@ -527,7 +531,7 @@ function App() {
               Resultados <span className="text-cyan-400">Reais</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Veja as transformações incríveis dos meus alunos. Cada resultado é único e conquistado com dedicação, método e acompanhamento personalizado.
+              Veja as transformações incríveis das minhas alunas. Cada resultado é único e conquistado com dedicação, método e acompanhamento personalizado.
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
           </div>
@@ -544,7 +548,7 @@ function App() {
                     <img
                       src={transformation.before}
                       alt="Antes"
-                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-[500px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                       ANTES
@@ -554,7 +558,7 @@ function App() {
                     <img
                       src={transformation.after}
                       alt="Depois"
-                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-[500px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                       DEPOIS
@@ -592,8 +596,8 @@ function App() {
               Meus <span className="text-cyan-400">Produtos</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Produtos digitais desenvolvidos com base na minha experiência de mais de 10 anos. 
-              Conteúdo prático e científico para acelerar seus resultados.
+              Produtos digitais pensados com base em estudo, prática e no que realmente funciona.
+              <br></br>Conteúdo estratégico e embasado para você alcançar seus objetivos.
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
           </div>
@@ -652,18 +656,6 @@ function App() {
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-16">
-            <div className="bg-slate-900/50 p-8 rounded-3xl border border-slate-700 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                🎯 <span className="text-cyan-400">Garantia de 7 dias</span>
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                Todos os produtos possuem garantia incondicional de 7 dias. 
-                Se não ficar satisfeito, devolvemos 100% do seu dinheiro.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -676,7 +668,8 @@ function App() {
               Meus <span className="text-cyan-400">Serviços</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Escolha o método que melhor se adapta ao seu estilo de vida e objetivos. Todos os planos incluem acompanhamento personalizado.
+              Escolha o método que melhor se adapta ao seu estilo de vida e objetivos. 
+              <br></br>Todos os planos incluem acompanhamento personalizado.
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
           </div>
@@ -713,12 +706,16 @@ function App() {
                       ))}
                     </ul>
                     
-                    <button 
-                      onClick={() => scrollToSection('contact')}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-cyan-400 text-slate-900 py-3 rounded-full font-bold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
+                    <a 
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full block text-center bg-gradient-to-r from-cyan-500 to-cyan-400 text-slate-900 py-3 rounded-full font-bold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105"
                     >
                       Escolher Plano
-                    </button>
+                    </a>
+
+
                   </div>
                 </div>
               );
@@ -754,7 +751,7 @@ function App() {
                     </div>
                     <div>
                       <div className="text-gray-400 text-sm">Telefone / WhatsApp</div>
-                      <div className="text-white font-semibold text-lg">(11) 99999-9999</div>
+                      <div className="text-white font-semibold text-lg">+55 (43) 98457-3717</div>
                     </div>
                   </div>
                   
@@ -764,7 +761,7 @@ function App() {
                     </div>
                     <div>
                       <div className="text-gray-400 text-sm">Email</div>
-                      <div className="text-white font-semibold text-lg">carlos@fitcoach.com</div>
+                      <div className="text-white font-semibold text-lg">raphhaa_@edu.unifil.br</div>
                     </div>
                   </div>
                   
@@ -774,7 +771,7 @@ function App() {
                     </div>
                     <div>
                       <div className="text-gray-400 text-sm">Localização</div>
-                      <div className="text-white font-semibold text-lg">São Paulo, SP</div>
+                      <div className="text-white font-semibold text-lg">Londrina, Paraná</div>
                     </div>
                   </div>
                 </div>
@@ -784,23 +781,20 @@ function App() {
                   <h4 className="text-xl font-bold text-white mb-6">Redes Sociais</h4>
                   <div className="flex space-x-4">
                     <a
-                      href="#"
-                      className="bg-cyan-400/10 p-4 rounded-full hover:bg-cyan-400/20 transition-all duration-300 hover:scale-110 group"
-                    >
-                      <Instagram className="text-cyan-400 group-hover:text-cyan-300" size={24} />
-                    </a>
+                        href="https://www.instagram.com/raphael.viezorkosky.treinador/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-cyan-400/10 p-4 rounded-full hover:bg-cyan-400/20 transition-all duration-300 hover:scale-110 group"
+                        > <FaInstagram size={24} color="pink" />
+                       </a>
+
                     <a
-                      href="#"
+                      href= "https://wa.me/+5543984573717"
+                      target="_blank"
                       className="bg-cyan-400/10 p-4 rounded-full hover:bg-cyan-400/20 transition-all duration-300 hover:scale-110 group"
-                    >
-                      <Facebook className="text-cyan-400 group-hover:text-cyan-300" size={24} />
+                    > <FaWhatsapp size={24} color="green" />
                     </a>
-                    <a
-                      href="#"
-                      className="bg-cyan-400/10 p-4 rounded-full hover:bg-cyan-400/20 transition-all duration-300 hover:scale-110 group"
-                    >
-                      <WhatsApp className="text-cyan-400 group-hover:text-cyan-300" size={24} />
-                    </a>
+
                   </div>
                 </div>
               </div>
@@ -892,25 +886,15 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent mb-4">
-              FitCoach Pro
+              Raphael Viezorkosky
             </div>
             <p className="text-gray-400 mb-4">
-              Transformando vidas através do fitness e bem-estar
+              Elevando sua saúde e autoestima.
             </p>
-            <div className="flex justify-center space-x-6">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                <Instagram size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                <Facebook size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                <WhatsApp size={24} />
-              </a>
-            </div>
+  
             <div className="mt-8 pt-8 border-t border-slate-700">
               <p className="text-gray-500 text-sm">
-                © 2024 FitCoach Pro. Todos os direitos reservados.
+                ©  2025 Desenvolvido por Ane Elise | Todos os direitos reservados.
               </p>
             </div>
           </div>
