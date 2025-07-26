@@ -459,7 +459,7 @@ function App() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
                         <h5 className="text-cyan-400 font-bold text-lg mb-3">Musculação Feminina</h5>
-                        <p className="text-gray-300 text-sm mb-3">PProtocolos personalizados para a melhora da estética corporal, com foco no público feminino.</p>
+                        <p className="text-gray-300 text-sm mb-3">Protocolos personalizados para a melhora da estética corporal, com foco no público feminino.</p>
                         <ul className="text-gray-400 text-sm space-y-1">
                           <li>• Treinos específicos para membros inferiores, glúteos e correção postural.</li>
                           <li>• Divisão estratégica dos exercícios para resultados eficazes.</li>
@@ -602,11 +602,11 @@ function App() {
               >
 
                 {/* tamanho do card da aba de produtos */}
-                <div className="relative overflow-hidden">
+                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
 
                   />
                   <div className="absolute top-4 right-4">
@@ -662,7 +662,7 @@ function App() {
               Meus <span className="text-cyan-400">Serviços</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Escolha o método que melhor se adapta ao seu estilo de vida e objetivos. 
+              Escolha o plano que melhor se adapta ao seu estilo de vida e objetivos. 
               <br></br>Todos os planos incluem acompanhamento personalizado.
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
