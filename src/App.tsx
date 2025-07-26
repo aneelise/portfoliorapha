@@ -161,17 +161,17 @@ function App() {
     {
       title: 'Corrigindo a Hipercifose Torácica',
       description: 'E-book com estratégias práticas para corrigir a postura e melhorar a estética corporal.',
-      price: 'R$ 97',
-      originalPrice: 'R$ 197',
+      price: 'R$ 39,90',
+      originalPrice: 'R$ 69,90',
       image: 'images/ebookpostura1.webp',
-      features: ['120+ páginas', 'Planos alimentares', 'Receitas saudáveis', 'Suporte por 30 dias'],
-      hotmartUrl: '#'
+      features: ['Planilha de treino com aplicação imediata', 'Explicações práticas dos alongamentos', 'Material claro, direto e acessível', 'Vídeos explicativos dos exercícios'],
+      hotmartUrl: 'https://hotmart.com/pt-br/marketplace/produtos/corrigindo-a-hipercifose-toracica/A92252553M'
     },
     {
       title: 'Transforme sua Bunda em Glúteo',
       description: 'E-book com passo a passo para conquistar glúteos de respeito, com estratégias focadas na estética feminina e bônus exclusivo de treino.',
       price: 'R$ 39,90',
-      originalPrice: 'R$ 69,90',
+      originalPrice: 'R$ 89,90',
       image: 'images/ebookgluteo.webp',
       features: ['Indicado para iniciantes e experientes', 'Foco em estética feminina', 'Planilha bônus com treino prático', 'Conteúdo elaborado por especialista em musculação'],
       hotmartUrl: 'https://pay.hotmart.com/P84375411L?checkoutMode=10&bid=1753210942644'
