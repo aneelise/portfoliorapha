@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Apple as Mail, Phone, MapPin, ArrowRight, ChevronDown, Play, Pause, Volume2, VolumeX, Award, Target, Zap } from 'lucide-react';
+import { Menu, X,   Mails as Mail, Phone, MapPin, ArrowRight, ChevronDown, Play, Pause, Volume2, VolumeX, Award, Target, Zap } from 'lucide-react';
 import { FaWhatsapp, FaInstagram, } from 'react-icons/fa';
 
 
@@ -128,7 +128,7 @@ function App() {
       title: 'Plano Trimestral',
       description: 'Suporte integral com opções de pagamento facilitadas',
       price: 'R$ 260/mês',
-      features: ['Pagamento mensal durante 3 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física',],
+      features: ['Pagamento mensal durante 3 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação Postural',],
       link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849763dae001976a68eb2c0297',
       icon: Zap
     },
@@ -136,7 +136,7 @@ function App() {
       title: 'Plano Semestral',
       description: 'Assistência completa com formas de pagamento que cabem em você',
       price: 'R$ 225/mês',
-      features: ['Pagamento mensal durante 6 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física',],
+      features: ['Pagamento mensal durante 6 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação Postural',],
       link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849764e81a01976a6a1a09023a',
       icon: Target
     },
@@ -144,7 +144,7 @@ function App() {
       title: 'Plano Anual',
       description: 'Melhor custo-benefício com compromisso de 12 meses',
       price: 'R$ 195/mês',
-      features: ['Pagamento mensal durante 12 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação física',],
+      features: ['Pagamento mensal durante 12 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação Postural',],
       link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c938084976a0ea101976a5fa1710025',
       icon: Target
     },
@@ -159,32 +159,23 @@ function App() {
 
   const products = [
     {
-      title: 'Guia Completo de Emagrecimento',
-      description: 'E-book com estratégias comprovadas para perder peso de forma saudável e duradoura.',
+      title: 'Corrigindo a Hipercifose Torácica',
+      description: 'E-book com estratégias práticas para corrigir a postura e melhorar a estética corporal.',
       price: 'R$ 97',
       originalPrice: 'R$ 197',
-      image: 'https://images.pexels.com/photos/4474052/pexels-photo-4474052.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'images/ebookpostura1.webp',
       features: ['120+ páginas', 'Planos alimentares', 'Receitas saudáveis', 'Suporte por 30 dias'],
       hotmartUrl: '#'
     },
     {
-      title: 'Treino em Casa - Sem Equipamentos',
-      description: 'Programa completo de exercícios para fazer em casa, sem precisar de academia.',
-      price: 'R$ 67',
-      originalPrice: 'R$ 147',
-      image: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['50+ exercícios', 'Vídeos explicativos', 'Progressão gradual', 'App mobile'],
-      hotmartUrl: '#'
+      title: 'Transforme sua Bunda em Glúteo',
+      description: 'E-book com passo a passo para conquistar glúteos de respeito, com estratégias focadas na estética feminina e bônus exclusivo de treino.',
+      price: 'R$ 39,90',
+      originalPrice: 'R$ 69,90',
+      image: 'images/ebookgluteo.webp',
+      features: ['Indicado para iniciantes e experientes', 'Foco em estética feminina', 'Planilha bônus com treino prático', 'Conteúdo elaborado por especialista em musculação'],
+      hotmartUrl: 'https://pay.hotmart.com/P84375411L?checkoutMode=10&bid=1753210942644'
     },
-    {
-      title: 'Mindset Fitness - Transformação Mental',
-      description: 'Curso sobre psicologia do emagrecimento e como manter a motivação.',
-      price: 'R$ 127',
-      originalPrice: 'R$ 247',
-      image: 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=400',
-      features: ['8 módulos', 'Técnicas de motivação', 'Planilhas práticas', 'Grupo VIP'],
-      hotmartUrl: '#'
-    }
   ];
 
   return (
@@ -609,11 +600,14 @@ function App() {
                 className="bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-700 hover:border-cyan-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-400/10 hover:scale-105 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+
+                {/* tamanho do card da aba de produtos */}
                 <div className="relative overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+
                   />
                   <div className="absolute top-4 right-4">
                     <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
