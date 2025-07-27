@@ -72,14 +72,27 @@ function App() {
       [e.target.name]: e.target.value
     });
   };
+          // API DO WPP
+      const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    console.log('Form submitted:', formData);
-    alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
+        const message = `
+      Olá! Tenho interesse no seu serviço.
+      Nome: ${formData.name}
+      Email: ${formData.email}
+      Telefone: ${formData.phone}
+      Mensagem: ${formData.message}
+        `;
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappNumber = '5543984573717'; // Substitua pelo seu número de WhatsApp
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+        window.open(whatsappUrl, '_blank');
+
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      };
+
 
   const navItems = [
     { id: 'home', label: 'Início' },
@@ -121,6 +134,21 @@ function App() {
       before: 'images/aluna5antes.webp',
       after: 'images/aluna5depois.webp',
     },
+      {
+      id: 6,
+      before: 'images/aneantes.webp',
+      after: 'images/anedepois.webp',
+    },
+      {
+      id: 6,
+      before: 'images/aluna5antes.webp',
+      after: 'images/aluna5depois.webp',
+    },
+      {
+      id: 6,
+      before: 'images/aluna5antes.webp',
+      after: 'images/aluna5depois.webp',
+    },
   ];
 
   const services = [
@@ -151,8 +179,26 @@ function App() {
         {
       title: 'Planos Black Friday',
       description: 'Melhor oportunidade do ano para começar sua jornada',
-      price: 'R$ 195/mês',
-      features: ['De 03/11 a 08/11'],
+      price:(
+    <div className="space-y-3">
+      <div>
+        <span className="font-medium">Trimestral: </span>
+        <span className="text-gray-500 line-through">R$260</span><br />
+        <span className="text-red-600 font-semibold">Por R$156/mês</span>
+      </div>
+      <div>
+        <span className="font-medium">Semestral: </span>
+        <span className="text-gray-500 line-through">R$225</span><br />
+        <span className="text-red-600 font-semibold">Por R$135/mês</span>
+      </div>
+      <div>
+        <span className="font-medium">Anual: </span>
+        <span className="text-gray-500 line-through">R$195</span><br />
+        <span className="text-red-600 font-semibold">Por R$117/mês</span>
+      </div>
+    </div>
+  ),
+      features: ['Promoção válida de 03/11 a 08/11'],
       link: '#',
       icon: Target
     },
@@ -675,7 +721,12 @@ function App() {
               Escolha o plano que melhor se adapta ao seu estilo de vida e objetivos. 
               <br></br>Todos os planos incluem acompanhamento e suporte via WhatsApp.
             </p>
-            <p>Os pagamentos são realizados de forma recorrente via cartão de crédito!</p>
+
+            <p className="text-gray-300 text-lg">
+              Os pagamentos são realizados de forma <span className="font-semibold" style={{ color: '#35E4DC' }}>recorrente</span> via <span className="font-semibold" style={{ color: '#35E4DC' }}>cartão de crédito</span>!
+            </p>
+
+
             <br></br>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
           </div>
@@ -712,7 +763,15 @@ function App() {
                         </li>
                       ))}
                     </ul>
-                    
+
+                    {service.title === "Planos Black Friday" ? (
+                    <button
+                      disabled
+                      className="w-full block text-center bg-gray-400 text-white py-3 rounded-full font-bold opacity-60 cursor-not-allowed"
+                    >
+                      Indisponível
+                    </button>
+                  ) : (
                     <a 
                       href={service.link}
                       target="_blank"
@@ -721,6 +780,8 @@ function App() {
                     >
                       Escolher Plano
                     </a>
+                  )}
+
 
 
                   </div>
@@ -740,7 +801,7 @@ function App() {
               Entre em <span className="text-cyan-400">Contato</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Pronto para começar sua transformação? Entre em contato e vamos conversar sobre seus objetivos. Retorno em até 60 minutos!
+              Pronta para começar sua transformação? Entre em contato e faça parte do melhor time. <br></br>Retorno em até 60 minutos!
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
           </div>
