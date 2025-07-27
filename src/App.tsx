@@ -120,7 +120,7 @@ function App() {
       id: 6,
       before: 'images/aluna5antes.webp',
       after: 'images/aluna5depois.webp',
-    }
+    },
   ];
 
   const services = [
@@ -134,7 +134,7 @@ function App() {
     },
        {
       title: 'Plano Semestral',
-      description: 'Assistência completa com formas de pagamento que cabem em você',
+      description: 'Assistência completa com formas de pagamento que cabem no seu bolso',
       price: 'R$ 225/mês',
       features: ['Pagamento mensal durante 6 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação Postural',],
       link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849764e81a01976a6a1a09023a',
@@ -148,13 +148,21 @@ function App() {
       link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c938084976a0ea101976a5fa1710025',
       icon: Target
     },
+        {
+      title: 'Planos Black Friday',
+      description: 'Melhor oportunidade do ano para começar sua jornada',
+      price: 'R$ 195/mês',
+      features: ['De 03/11 a 08/11'],
+      link: '#',
+      icon: Target
+    },
   ];
 
   const stats = [
     { number: '470+', label: 'Alunas' },
     { number: '100%', label: 'Treinos Individualizados' },
     { number: '95%', label: 'Taxa de Sucesso' },
-    { number: '24/7', label: 'Suporte Disponível' }
+    { number: '8h/20h', label: 'Suporte Disponível' }
   ];
 
   const products = [
@@ -163,7 +171,7 @@ function App() {
       description: 'E-book com estratégias práticas para corrigir a postura e melhorar a estética corporal.',
       price: 'R$ 39,90',
       originalPrice: 'R$ 69,90',
-      image: 'images/ebookpostura1.webp',
+      image: 'images/postura.webp',
       features: ['Planilha de treino com aplicação imediata', 'Explicações práticas dos alongamentos', 'Material claro, direto e acessível', 'Vídeos explicativos dos exercícios'],
       hotmartUrl: 'https://hotmart.com/pt-br/marketplace/produtos/corrigindo-a-hipercifose-toracica/A92252553M'
     },
@@ -364,7 +372,7 @@ function App() {
                   Raphael <span className="text-cyan-400">Viezorkosky</span>
                 </h3>
                 <p className="text-cyan-400 text-xl font-semibold mb-6">
-                  Educador Físico • CREF PR - 035707
+                  Prof. Educação Fisíca • CREF 035707 - PR
                 </p>
               </div>
               
@@ -646,11 +654,13 @@ function App() {
                   >
                     Comprar Agora
                   </a>
+      
                 </div>
               </div>
             ))}
           </div>
         </div>
+
       </section>
 
       {/* Services Section */}
@@ -663,11 +673,14 @@ function App() {
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Escolha o plano que melhor se adapta ao seu estilo de vida e objetivos. 
-              <br></br>Todos os planos incluem acompanhamento personalizado.
+              <br></br>Todos os planos incluem acompanhamento e suporte via WhatsApp.
             </p>
+            <p>Os pagamentos são realizados de forma recorrente via cartão de crédito!</p>
+            <br></br>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
           </div>
-
+          
+          
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => {
               const IconComponent = service.icon;
@@ -727,7 +740,7 @@ function App() {
               Entre em <span className="text-cyan-400">Contato</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Pronto para começar sua transformação? Entre em contato e vamos conversar sobre seus objetivos. Respondo em até 2 horas!
+              Pronto para começar sua transformação? Entre em contato e vamos conversar sobre seus objetivos. Retorno em até 60 minutos!
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-cyan-400 mx-auto"></div>
           </div>
