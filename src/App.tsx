@@ -111,8 +111,8 @@ function App() {
     },
     {
       id: 2,
-      before: 'images/aluna2antes.webp',
-      after: 'images/aluna2depois.webp',
+      before: 'images/aluna9antes.webp',
+      after: 'images/aluna9depois.webp',
     },
     {
       id: 3,
@@ -141,13 +141,13 @@ function App() {
     },
       {
       id: 6,
-      before: 'images/aluna5antes.webp',
-      after: 'images/aluna5depois.webp',
+      before: 'images/aluna8antes.webp',
+      after: 'images/aluna8depois.webp',
     },
       {
       id: 6,
-      before: 'images/aluna5antes.webp',
-      after: 'images/aluna5depois.webp',
+      before: 'images/aluna10antes.webp',
+      after: 'images/aluna10depois.webp',
     },
   ];
 
