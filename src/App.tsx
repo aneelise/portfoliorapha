@@ -413,12 +413,12 @@ function App() {
               />
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 max-w-full">
               <div>
-                <h3 className="text-4xl font-bold text-white mb-4">
+                <h3 className="text-4xl md:text-5xl font-bold text-white mb-4 break-words whitespace-normal">
                   Raphael <span className="text-cyan-400">Viezorkosky</span>
                 </h3>
-                <p className="text-cyan-400 text-xl font-semibold mb-6">
+                <p className="text-cyan-400 text-lg md:text-xl font-semibold mb-6 break-words whitespace-normal">
                   Prof. Educação Fisíca • CREF 035707 - PR
                 </p>
               </div>
@@ -459,26 +459,21 @@ function App() {
               {/* Tab Content */}
               <div className="min-h-[300px]">
                 {activeTab === 'sobre' && (
-                  <div className="space-y-6 animate-fade-in">
-                    <p className="text-gray-300 text-lg leading-relaxed">
-                      Sou formado em Educação Física e especialista em Musculação Feminina e Estética, Correção Postural e Glúteos.
-                      Já acompanhei mais de 470 alunas no digital, em 4 continentes, sempre com foco em resultados reais e duradouros, 
-                      dentro de uma consultoria que te acompanha de verdade.
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 overflow-visible text-left lg:text-justify">
+              <p className="text-gray-300 text-sm md:text-lg leading-relaxed whitespace-normal">
+                Sou formado em Educação Física e especialista em Musculação Feminina e Estética, Correção Postural e Glúteos.
+                Já acompanhei mais de 470 alunas no digital, em 4 continentes, sempre com foco em resultados reais e duradouros, dentro de uma consultoria que te acompanha de verdade.
+              </p>
 
-                    </p>
+              <p className="text-gray-300 text-sm md:text-lg leading-relaxed whitespace-normal">
+                Meu trabalho é baseado em ciência, vivência prática e individualidade. Cada planilha de treino é pensada exclusivamente para atender os objetivos e necessidades de cada aluna, de maneira totalmente individual, com acompanhamento direto e personalizados feito por mim, não existe ficha pronta.
+              </p>
 
-                    <p className="text-gray-300 text-lg leading-relaxed">
-                      Meu trabalho é baseado em ciência, vivência prática e individualidade.
-                      Cada planilha de treino é pensada exclusivamente para atender os objetivos e necessidades de cada aluna, 
-                      de maneira totalmente individual, com acompanhamento direto e personalizados feito por mim, não existe ficha pronta. 
+              <p className="text-gray-300 text-sm md:text-lg leading-relaxed whitespace-normal">
+                Mais do que treinar, meu objetivo é te ajudar a se sentir bem com você mesma, resgatando sua autoestima por meio da estética e da performance.
+              </p>
+            </div>
 
-                    </p>
-
-                    <p className="text-gray-300 text-lg leading-relaxed">
-                      Mais do que treinar, meu objetivo é te ajudar a se sentir bem com você mesma,
-                      resgatando sua autoestima por meio da estética e da performance.
-                    </p>
-                  </div>
                 )}
 
                 {activeTab === 'formacao' && (
