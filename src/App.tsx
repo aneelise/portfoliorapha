@@ -116,8 +116,8 @@ function App() {
     },
     {
       id: 3,
-      before: 'images/aluna3antes.webp',
-      after: 'images/aluna3depois.webp',
+      before: 'images/aneantes.webp',
+      after: 'images/anedepois.webp',
     },
     {
       id: 4,
@@ -136,8 +136,8 @@ function App() {
     },
       {
       id: 6,
-      before: 'images/aneantes.webp',
-      after: 'images/anedepois.webp',
+      before: 'images/aluna12antes.webp',
+      after: 'images/aluna12depois.webp',
     },
       {
       id: 6,
