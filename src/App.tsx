@@ -7,7 +7,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [activeTab, setActiveTab] = useState('sobre');
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const [isVideoMuted, setIsVideoMuted] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
@@ -146,8 +146,8 @@ function App() {
     },
       {
       id: 6,
-      before: 'images/aluna10antes.webp',
-      after: 'images/aluna10depois.webp',
+      before: 'images/aluna11antes.webp',
+      after: 'images/aluna11depois.webp',
     },
   ];
 
@@ -301,17 +301,18 @@ function App() {
 
       {/* Hero Section with Video */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
+        {/* Video Background , imagem de capa*/}
         <div className="absolute inset-0 z-0">
-          <video
-            id="heroVideo"
-            className="w-full h-full object-cover"
-            loop
-            muted={isVideoMuted}
-            poster="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          >
-            <source src="https://videos.pexels.com/video-files/3765373/3765373-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-          </video>
+            <div className="absolute inset-0 z-0">
+              <img
+                src="images/wallteste.webp"
+                alt="Background"
+                className="w-full h-full object-cover"
+              />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-900/30 to-slate-900/50"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-slate-900/30"></div>
+            </div>
+
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-slate-900/80"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-slate-900/50"></div>
         </div>
