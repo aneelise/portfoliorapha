@@ -20,11 +20,9 @@ O projeto foi pensado para ser responsivo, visualmente atrativo e fácil de nave
 
 # Tecnologias Utilizadas
 
-📲 React.js – estrutura principal do projeto  
-
-📲 Tailwind CSS – estilização rápida e responsiva  
-
-📲 JavaScript – lógica da aplicação  
-
-📲 HTML (JSX) – marcação das páginas
-📲 Responsivo – otimizado para desktops, tablets e smartphones
+📲 React.js    
+📲 Tailwind CSS  
+📲 JavaScript  
+📲 TypeScript  
+📲 HTML (JSX)  
+📲 Responsivo  
