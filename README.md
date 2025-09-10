@@ -1,69 +1,30 @@
-# React + TypeScript + Vite
+# Plataforma de Consultoria Online e eBooks de Treinamento
+Descrição do Projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicação foi desenvolvida para o treinador Raphael que deseja vender suas consultorias online e eBooks de treinamento de maneira prática e profissional. Além das vendas, o site apresenta a trajetória do treinador, sua metodologia, depoimentos e resultados das alunas, fortalecendo sua autoridade e a conexão com o público.
 
-Currently, two official plugins are available:
+O projeto foi pensado para ser responsivo, visualmente atrativo e fácil de navegar, proporcionando uma ótima experiência para o usuário e potencializando as vendas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🧩 Funcionalidades
 
-## Expanding the ESLint configuration
+✅ Página de apresentação do treinador, sua metodologia e resultados.  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Seção de resultados das alunas.  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✅ Área de vendas de consultorias online e eBooks.  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+✅ Layout moderno e responsivo.  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✅ Navegação intuitiva para facilitar a experiência do usuário.  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Tecnologias Utilizadas
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📲 React.js – estrutura principal do projeto  
+
+📲 Tailwind CSS – estilização rápida e responsiva  
+
+📲 JavaScript – lógica da aplicação  
+
+📲 HTML (JSX) – marcação das páginas
+📲 Responsivo – otimizado para desktops, tablets e smartphones
