@@ -184,17 +184,17 @@ function App() {
       <div>
         <span className="font-medium">Trimestral: </span>
         <span className="text-gray-500 line-through">R$260</span><br />
-        <span className="text-red-600 font-semibold">Por R$156/mês</span>
+        <span className="text-red-600 font-semibold">Por R$208/mês</span>
       </div>
       <div>
         <span className="font-medium">Semestral: </span>
         <span className="text-gray-500 line-through">R$225</span><br />
-        <span className="text-red-600 font-semibold">Por R$135/mês</span>
+        <span className="text-red-600 font-semibold">Por R$157/mês</span>
       </div>
       <div>
         <span className="font-medium">Anual: </span>
         <span className="text-gray-500 line-through">R$195</span><br />
-        <span className="text-red-600 font-semibold">Por R$117/mês</span>
+        <span className="text-red-600 font-semibold">Por R$136,50/mês</span>
       </div>
     </div>
   ),
