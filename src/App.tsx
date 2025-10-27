@@ -155,25 +155,25 @@ function App() {
     {
       title: 'Plano Trimestral',
       description: 'Suporte integral com opções de pagamento facilitadas',
-      price: 'R$ 260/mês',
+      price: 'R$ 208/mês',
       features: ['Pagamento mensal durante 3 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação Postural',],
-      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849763dae001976a68eb2c0297',
+      link: 'https://pagamento.pagbank.com.br/pagamento?t=1f83f33b-13f3-42e2-be19-1c454bcbd93c&code=2b6ace9a-a8ba-4045-a955-b7facc05bbfd',
       icon: Zap
     },
        {
       title: 'Plano Semestral',
       description: 'Assistência completa com formas de pagamento que cabem no seu bolso',
-      price: 'R$ 225/mês',
+      price: 'R$ 157/mês',
       features: ['Pagamento mensal durante 6 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação Postural',],
-      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380849764e81a01976a6a1a09023a',
+      link: 'https://pagamento.pagbank.com.br/pagamento?t=4c2732c0-c31a-427d-b2ca-6b6b44e8b198&code=d6e1250a-5560-456e-b469-eec42f81c2c6',
       icon: Target
     },
     {
       title: 'Plano Anual',
       description: 'Melhor custo-benefício com compromisso de 12 meses',
-      price: 'R$ 195/mês',
+      price: 'R$ 136,50/mês',
       features: ['Pagamento mensal durante 12 meses','Treinos personalizados', 'Suporte via WhatsApp', 'Avaliação Postural',],
-      link: 'https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c938084976a0ea101976a5fa1710025',
+      link: 'https://pagamento.pagbank.com.br/pagamento?t=7b58c70f-12dc-47a0-881a-28ae9a09fbb7&code=561eab62-2b3b-4430-9650-0a8820a13d7e',
       icon: Target
     },
         {
